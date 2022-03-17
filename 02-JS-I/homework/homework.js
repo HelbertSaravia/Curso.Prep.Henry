@@ -28,67 +28,101 @@ const nuevoModulo = 21 % 5 === 1;
 function devolverString(str) {
   // "Return" la string provista: str
   // Tu código:
-  
+  var cadena = str;
+  return cadena;
 }
+devolverString("Estoy emosionado");
 
 function suma(x, y) {
   // "x" e "y" son números
   // Suma "x" e "y" juntos y devuelve el valor
   // Tu código:
-  
+  var adicion=x+y;
+  return adicion;
 }
+suma(5,7);
+
 
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
-  
+  var reduccion=x-y;
+  return reduccion;
 }
+resta(8,4);
 
 function multiplica(x, y) {
   // Multiplica "x" por "y" y devuelve el valor
   // Tu código:
-  
+  var repite=x*y;
+  return repite;
 }
+multiplica(5,7);
 
 function divide(x, y) {
   // Divide "x" entre "y" y devuelve el valor
   // Tu código:
-  
+  var divisor=x/y;
+  return divisor;
 }
+divide(8,4);
 
 function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:
-  
+  if (x===y){
+    return true;
+  }
+  else {
+    return false;
+  }  
 }
+sonIguales(8,8);
 
 function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
+  if (str1.length===str2.length){
+    return true;
+  }
+  else{
+    return false;
+  }
   
 }
+tienenMismaLongitud("andreita","leilita");
 
 function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
   // De lo contrario, devuelve "false"
   // Tu código:
-  
+  if(num<90){
+    return true;
+  }
+  retur false;
 }
+menosQueNoventa(78);
 
 function mayorQueCincuenta(num) {
   // Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
   // De lo contrario, devuelve "false"
   // Tu código:
-  
+  if (num>50){
+    return true;
+  }
+  return false;
 }
+mayorQueCincuenta(55);
 
 function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
-  
+  var sobra=x%y;
+  return sobra;
 }
+obtenerResto(9,2);
 
 function esPar(num) {
   // Devuelve "true" si "num" es par
