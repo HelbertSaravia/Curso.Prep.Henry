@@ -122,7 +122,7 @@ function obtenerResto(x, y) {
   var sobra=x%y;
   return sobra;
 }
-obtenerResto(9,2);
+obtenerResto(9,4);
 
 function esPar(num) {
   // Devuelve "true" si "num" es par
