@@ -267,7 +267,6 @@ function doWhile(numero) {
   //Usar el bucle do ... while.
   var valor=numero+(5*8);
 
-
   do{
     numero=numero+5;
   return valor;  
