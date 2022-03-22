@@ -13,7 +13,9 @@ function obtenerMayor(x, y) {
   }
   
 }
-obtenerMayor(12,12);
+
+obtenerMayor(12,15);
+
 
 function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
@@ -53,17 +55,21 @@ function saludo(idioma) {
   // Si "idioma" es "ingles", devuelve "Hello!"
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
-  var lengua=idioma;
+   if (idioma.length>0){
+  var lengua=idioma.toUpperCase();
   switch(lengua){
-    case "aleman": return "Guten Tag!"; break;
-    case "mandarin":  return "Ni Hao!"; break;
-    case "ingles":  return "Hello!";  break;
-    default: return "Hola!";
+    case "ALEMAN": return "Guten Tag!"; break;
+    case "MANDARIN":  return "Ni hao!"; break;
+    case "INGLES":  return "Hello!";  break;
     }
-  
-  
+  }
+  else{
+    
+    return "Hola!";
+  }
 }
-saludo(1);
+saludo("aleMAN");
+
 
 function colors(color) {
   //La función recibe un color. Devolver el string correspondiente:
@@ -134,21 +140,22 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  if(numero%3===0&&numero%5===0){
-    
-    return "fizzbuzz";
+
+  if(numero%3===0){
+    console.log("fizz"); return "fizz";
     }
   else if(numero%5===0){
-    return "buzz";
+    console.log("buzz"); return "buzz";
   }
-  else if(numero%3===0){
-    return "fizz";
+  else if(numero%3===numero%5){
+    console.log("fizzbuzz"); return "fizzbuzz";
   }
   else {
-    return numero;
+    console.log(numero); return numero;
   }
 }
-fizzBuzz(4);
+fizzBuzz(30);
+
 
 function operadoresLogicos(num1, num2, num3) {
   //La función recibe tres números distintos. 
