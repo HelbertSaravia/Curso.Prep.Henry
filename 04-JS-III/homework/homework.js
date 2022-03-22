@@ -3,42 +3,64 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
+  console.log(array[0]);
+  return array[0]
 }
-
+devolverPrimerElemento([3,4,5,6,7,8]);
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
+  console.log(array[array.length-1]);
+  return array[array.length-1];
 }
+devolverUltimoElemento(["albert","pedro","julio","tito","pedrote","carlos"]);
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
+  console.log(array.length);
+  return array.length;
 }
-
+obtenerLargoDelArray([1,2,3,4,5,6,7,8,9]);
 
 function incrementarPorUno(array) {
   // "array" debe ser una matriz de enteros (int/integers)
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+  //var array=[1,2,3,4,5,6];
+  for (let i=0; i<array.length; i++){
+    array[i]=array[i]+1;
+  }
+  console.log(array);
+  return array;
 }
-
+incrementarPorUno([2,4,6,8,10]);
 
 function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
+  //var array=[1,2,3,4,5];
+  array.push(array);
+  console.log(array);
+  return array;
 }
 
+agregarItemAlFinalDelArray([1,2,3,4,5], 8);
 
 function agregarItemAlComienzoDelArray(array, elemento) {
   // Añade el "elemento" al comienzo del array
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
+  array.unshift("elemento");
+  console.log(array);
+  return array;
 }
+agregarItemAlComienzoDelArray(["elemento"]);
 
 
 function dePalabrasAFrase(palabras) {
