@@ -56,15 +56,15 @@ function saludo(idioma) {
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
    
+
   switch(idioma){
-    case "aleman": console.log(idioma); return "Guten Tag!"; break;
-    case "mandarin": console.log(idioma);  return "Ni Hao!"; break;
-    case "ingles": console.log(idioma); return "Hello!";  break;
-    default: console.log("Holar"); return "Hola!";
+    case "aleman": return "Guten Tag!"; break;
+    case "mandarin":  return "Ni Hao!"; break;
+    case "ingles":  return "Hello!";  break;
+    default: return "Hola!";
     }
-    
   
-    
+
 }
 saludo("aleman");
 
@@ -139,7 +139,9 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
 
-  if(numero%15==0){
+
+  if(numero%3===numero%5){
+
     console.log("fizzbuzz"); return "fizzbuzz";
   }
 
