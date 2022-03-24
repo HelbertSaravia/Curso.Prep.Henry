@@ -55,18 +55,15 @@ function saludo(idioma) {
   // Si "idioma" es "ingles", devuelve "Hello!"
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
-   if (idioma.length>0){
-  var lengua=idioma.toUpperCase();
-  switch(lengua){
-    case "ALEMAN": return "Guten Tag!"; break;
-    case "MANDARIN":  return "Ni hao!"; break;
-    case "INGLES":  return "Hello!";  break;
+   
+  
+  switch(idioma){
+    case "aleman": return "Guten Tag!"; break;
+    case "mandarin":  return "Ni Hao!"; break;
+    case "ingles":  return "Hello!";  break;
+    default: return "Hola!";
     }
-  }
-  else{
-    
-    return "Hola!";
-  }
+  
 }
 saludo("aleMAN");
 
@@ -141,18 +138,20 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
 
+  if(numero%3===numero%5){
+    console.log("fizzbuzz"); return "fizzbuzz";
+  }
+
   if(numero%3===0){
     console.log("fizz"); return "fizz";
     }
-  else if(numero%5===0){
+  if(numero%5===0){
     console.log("buzz"); return "buzz";
   }
-  else if(numero%3===numero%5){
-    console.log("fizzbuzz"); return "fizzbuzz";
-  }
-  else {
+  
+  
     console.log(numero); return numero;
-  }
+  
 }
 fizzBuzz(30);
 
