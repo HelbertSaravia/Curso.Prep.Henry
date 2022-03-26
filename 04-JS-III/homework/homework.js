@@ -44,23 +44,23 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // y devuelve el array
   // Tu código:
   //var array=[1,2,3,4,5];
-  array.push(array);
+  array.push(elemento);
   console.log(array);
   return array;
 }
 
-agregarItemAlFinalDelArray([1,2,3,4,5], 8);
+agregarItemAlFinalDelArray([1,2,3,4,5], "pipo");
 
 function agregarItemAlComienzoDelArray(array, elemento) {
   // Añade el "elemento" al comienzo del array
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
-  array.unshift("elemento");
+  array.unshift(elemento);
   console.log(array);
   return array;
 }
-agregarItemAlComienzoDelArray(["elemento"]);
+agregarItemAlComienzoDelArray(["a","b","c","d"],23);
 
 
 function dePalabrasAFrase(palabras) {
@@ -69,15 +69,31 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+ 
+  var a=palabras.join(" ");
+  console.log(a);
+  return a;
 }
+dePalabrasAFrase(["Hello", "world!"]);
 
 
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
-}
+ if(array.includes(elemento)){
+  console.log (true);
+  return true;
+ }
+ else {
+  console.log (false);
+  return false;
+ }
 
+}  
+
+
+arrayContiene(["a","b","c","d"], "z");
 
 function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
