@@ -124,29 +124,65 @@ function promedioResultadosTest(resultadosTest) {
   return promedio;
 }
 
-promedioResultadosTest([13,15,17,18,12]);
+promedioResultadosTest([18,15,17,13,12]);
 
 
 function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
-}
+  var b=1;   
+  for(let i=0;i<numeros.length;i++){
+    
+      for (let a=0; numeros[i]>=numeros[a]; a++){
 
+        if(a>(numeros.length-2)){
+
+          console.log(numeros[i]);
+          return numeros[i];
+        }    
+      }
+        }
+
+   
+   
+}
+numeroMasGrande([800,5,101,9,7,1110]);
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+ if(arguments.length<1){
+    console.log(0);
+    return 0;
+  }
+  var total=1;
+  for (let i=0; i<arguments.length;i++){
+    total=total*arguments[i];
+    console.log(total)
+    
+  }
+ return total;
+
 }
 
+multiplicarArgumentos(1,2,3,4,5,6);
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
+  var a=0;
+  for (let i=0; i<arreglo.length;i++){
+    if(arreglo[i]>18){
+      a++;
+    }
+  }
+  console.log(a);
+  return a;
 
 }
-
+cuentoElementos([23,12,25,10,8,18,34]);
 
 function diaDeLaSemana(numeroDeDia) {
   //Suponga que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente. 
