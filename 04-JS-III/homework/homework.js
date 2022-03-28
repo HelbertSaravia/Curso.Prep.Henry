@@ -189,16 +189,41 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
+  var dia=[1,2,3,4,5,6,7];
+  if(numeroDeDia===dia[0]||numeroDeDia===dia[6]){
+    console.log("Es fin de semana");
+    return "Es fin de semana";
+  }
+  else{
+    console.log("Es día Laboral");
+    return "Es dia Laboral";
+  }
+
   
 } 
+diaDeLaSemana(5);
 
 
 function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  
+  var empieza=10
+
+  for(let i=0;i<=n.length;i++ ){
+
+    n=n/10;
+    
+    console.log(n);
+
+ /* if(n*10===9){
+    console.log(true);
+    return true;
+  }*/
+  }
+ 
 }
+empiezaConNueve(94);
 
 
 function todosIguales(arreglo) {
