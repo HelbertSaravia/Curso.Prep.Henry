@@ -189,24 +189,74 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
+  var dia=[1,2,3,4,5,6,7];
+  for(let i=0; i<dia.length;i++){
+    if(dia[i]===numeroDeDia){
+      if(dia[i]===1||dia[i]===7){
+        console.log ("Es fin de semana");
+        return "Es fin de semana";
+       }
+       else{
+      console.log("Es dia Laboral");
+      return "Es dia Laboral";
+    }
+  }
+}
+      
   
+
 } 
+diaDeLaSemana(7);
 
 
 function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  
+  var b=10;
+  for(i=1;n>9;i++){
+    n=n/10;
+    n=Math.floor(n);
+  }
+  if(n===9){
+    console.log(true);
+    return true;
+  }
+  else{
+    console.log(false);
+    return false;
+  }
+    
 }
+
+empiezaConNueve(91345)
 
 
 function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
-  //Escribe tu código aquí  
+  //Escribe tu código aquí
+  var suma=0;
+  var div=0;
+  for(let i=0; i<arreglo.length; i++){
+    suma=suma+arreglo[i];
+
+  }
+  div=suma/(arreglo.length);
+  
+  if(div===arreglo[0]){
+    console.log(true);
+    return true;
+  }
+  else{
+    console.log(false);
+    return false
+  }
+
   
 } 
+
+todosIguales([3,3,3,4,3]);
 
 
 function mesesDelAño(array) {
@@ -214,8 +264,24 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+  var nuevoarray=[];
+  for(let i=0; i<array.length; i++){
+    switch(array[i]){
+      case "Enero": nuevoarray.push("Enero");
+      case "Marzo": nuevoarray.unshift("Marzo");
+      case "Noviembre": nuevoarray[0]="Noviembre";
+    }
+  }
+  if(nuevoarray.length===3){
+    console.log(nuevoarray);
+    return nuevoarray;
+  }
+  else{
+    console.log("No se encontraron los meses pedidos");
+    return "No se encontraron los meses pedidos";
+  }
 }
-
+mesesDelAño(["Febrero","Marzo","Setiembre","Enero","Agosto","Noviembre"]);
 
 function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
