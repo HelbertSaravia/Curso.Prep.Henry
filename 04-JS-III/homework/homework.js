@@ -256,7 +256,7 @@ function todosIguales(arreglo) {
   
 } 
 
-todosIguales([3,3,3,4,3]);
+todosIguales([3,3,3,3,3]);
 
 
 function mesesDelAño(array) {
@@ -267,28 +267,45 @@ function mesesDelAño(array) {
   var nuevoarray=[];
   for(let i=0; i<array.length; i++){
     switch(array[i]){
-      case "Enero": nuevoarray.push("Enero");
-      case "Marzo": nuevoarray.unshift("Marzo");
-      case "Noviembre": nuevoarray[0]="Noviembre";
+      
+      case "Marzo": var a= array[i]; break;
+      case "Noviembre": var b=array[i]; break;
+      case "Enero": var c =array[i]; break;
     }
   }
-  if(nuevoarray.length===3){
+
+  if(a==="Marzo"&&b==="Noviembre"&&c==="Enero"){
+    nuevoarray=[a,b,c];
     console.log(nuevoarray);
     return nuevoarray;
   }
   else{
+    
     console.log("No se encontraron los meses pedidos");
     return "No se encontraron los meses pedidos";
   }
 }
-mesesDelAño(["Febrero","Marzo","Setiembre","Enero","Agosto","Noviembre"]);
+mesesDelAño(["Noviembre","Febrero","Marzo","Enero","Setiembre","Agosto"]);
 
 function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
-}
+  var recorrer=[];
 
+    
+    for (let a=0;a<array.length;a++){
+      if(array[a]>100){
+
+        recorrer.push(array[a]);
+      }
+    }
+    
+    console.log(recorrer);
+    return recorrer;
+  }
+
+mayorACien([23,45,123,124]);
 
 function breakStatement(numero) {
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
@@ -298,7 +315,30 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+
+  var array=[];
+  var suma=0;
+  var a=1;
+
+
+
+  for(let i=0;i<=10;i++){
+    a++
+    array.push(numero);
+    suma=suma+numero;
+    numero=numero+2;
+ 
+  }
+
+
+
+   console.log (array);
+  console.log(suma);
+  return array;
+   
+
 }
+breakStatement(4);
 
 
 function continueStatement(numero) {
