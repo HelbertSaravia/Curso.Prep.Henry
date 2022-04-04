@@ -166,7 +166,20 @@ function pasarUsuarioAPremium(usuarios) {
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
+
+  //var usuarios=[usuario1,usuarui2,..,usuarioN]
+   /* var usuarios=[
+      usuario= { esPremium:1}, usuario= { esPremium:2}
+    ]*/
+  for (let i=0; i<usuarios.length; i++){
+     
+     usuarios[i].esPremium=true;
+     }
+ 
+  return usuarios;
+  
 }
+
 
 function sumarLikesDeUsuario(usuario) {
   // "usuario" tiene una propiedad llamada "posts" que es un array
@@ -175,7 +188,27 @@ function sumarLikesDeUsuario(usuario) {
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código:
+  /*var usuario={
+    posts:[post={likes:10}, post={likes:20}, post={likes:80}]  
+  }
+  */
+
+  var suma=0;
+
+  for(let i=0; i<usuario.posts.length; i++){
+  
+      suma=suma+ usuario.posts[i]["likes"];
+  }
+  
+
+  //contador=usuario.posts[1].likes;
+  //console.log(contador);
+
+  console.log(suma);
+  return suma;
+
 }
+
 
 function agregarMetodoCalculoDescuento(producto) {
   // Agregar un método (función) al objeto "producto" llamado "calcularPrecioDescuento"
@@ -187,6 +220,14 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
+var precio=0;
+  
+  producto.calcularPrecioDescuento=function(){   //podrias usar this en ves de producto.
+    precio=producto.precio - producto.precio * producto.porcentajeDeDescuento; 
+    return precio
+  }
+
+  return producto;
 
 }
 
