@@ -320,6 +320,34 @@ function breakStatement(numero) {
   // Tu código:
 
 
+  var array=[];
+  var suma=numero;
+  var contador=1
+
+
+
+  for(let i=0;i<10;i++){
+    suma=suma+2;
+    array.push(suma);
+    if(suma===contador){
+      break;
+    }
+    contador++;
+
+ }
+    if(contador===suma){
+            console.log("Se interrumpió la ejecución");
+      return "Se interrumpió la ejecución";
+    }
+
+    else{   
+       
+       console.log (array);
+      return array;
+ 
+  }
+}
+breakStatement(4);
 
 
 function continueStatement(numero) {
@@ -330,6 +358,29 @@ function continueStatement(numero) {
   //Pista: usá el statement 'continue'
   // Tu código:
 
+  var array=[];
+  var suma=numero;
+  
+  for(let i=0;i<10;i++){
+    
+    
+    if(i===4){
+
+
+      continue;
+
+    }
+    
+      suma=suma+2;
+    array.push(suma);
+    
+  }
+
+  console.log(array);
+  return array;
+
+}
+continueStatement(8)
 
 // No modificar nada debajo de esta línea
 // --------------------------------
